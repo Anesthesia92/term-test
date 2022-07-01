@@ -16,7 +16,7 @@ function displayData(json) {
 
 item.addEventListener('submit', submitForm);
 
-fetch('server.js')
+fetch('/js/server.js')
     .then(response => {
         if (response.ok) {
             alert('response is resolve');
