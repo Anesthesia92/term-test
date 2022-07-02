@@ -8,10 +8,10 @@ const submitForm = (e) => {
 };
 
 function displayData(json) {
-    const formDataElement = document.createElement('p');
-    formDataElement.classList.add('link');
-    formDataElement.textContent = json;
-    item.insertAdjacentElement('beforeend', formDataElement);
+    const formElement = document.createElement('p');
+    formElement.classList.add('json');
+    formElement.textContent = json;
+    item.insertAdjacentElement('beforeEnd', formElement);
 }
 
 item.addEventListener('submit', submitForm);
@@ -19,7 +19,7 @@ item.addEventListener('submit', submitForm);
 fetch('/js/server.js')
     .then(response => {
         if (response.ok) {
-            alert('response is resolve');
+            alert('response is ok');
         }
     })
     .catch((err) => console.log(err));
